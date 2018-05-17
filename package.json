@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "dev": "webpack-dev-server --config config/webpack.dev.js"
+    "dev": "NODE_ENV=development webpack-dev-server --config config/webpack.dev.js",
+    "build": "NODE_ENV=production webpack --config config/webpack.pro.js"
   },
   "dependencies": {
     "react": "^16.3.2",
@@ -14,8 +15,10 @@
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^0.28.11",
     "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.4.0",
     "postcss-loader": "^2.1.5",
     "style-loader": "^0.21.0",
     "webpack": "^4.8.3",
